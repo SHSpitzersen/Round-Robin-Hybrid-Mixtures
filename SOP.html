@@ -1,0 +1,117 @@
+<html>
+
+
+<link rel="shortcut icon" href="Resources/flamme.gif" type="image/gif">
+
+
+<style>
+
+/* Definition der Buttons */
+  .button {
+    border: none;
+    padding: 1vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2vw;
+    bottom: 2rem;
+    width: 24.5vw;
+  }
+
+/* Farbgebung der Buttons und der Schrift */
+  
+   .buttonhybridmixtures {
+    color: white;
+    background-color: #4CAF50;
+  }
+
+   .texthybridmixtures {
+  border-left: 0.8vw solid #4CAF50;
+  }
+
+  .buttonaskedfacilities {
+    background-color: #06DAFD;
+    color: Black;
+  }
+  
+  .textaskedfacilities {
+  border-left: 0.8vw solid #06DAFD;
+  }
+
+  .buttonapprovedfacilities {
+    background-color: #040404;
+    color: white;
+  }
+  
+   .textapprovedfacilities {
+  border-left: 0.8vw solid #040404;
+  }
+
+  .buttonprojectpartners {
+    background-color: #ff6001;
+    color: black;
+  }
+
+  .textprojectpartners {
+  border-left: 0.8vw solid #ff6001;
+  }
+
+  .buttonaboutproject {
+    background-color: #a3a3a3;
+    color: black;
+  }
+
+  .textaboutproject {
+  border-left: 0.8vw solid #a3a3a3;
+  }
+
+  .buttonsop {
+    background-color: #a3a3a3;
+    color: black;
+  }
+
+  .textsop {
+  border-left: 0.8vw solid #a3a3a3;
+  }
+  
+</style>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+
+  buttonstate = {}
+  function myFunction(var1) {
+    if (buttonstate[var1]) {
+      $(var1).css('display', 'none');
+      buttonstate[var1] = false
+    } else {
+      $(var1).css('display', 'block');
+      buttonstate[var1] = true
+    }
+  }
+</script>
+
+<body>
+
+  <div style="position: fixed;font-size: 0; top: 0.2vw;left: 0.2vw;">
+	<button class="button buttonhybridmixtures" onclick="myFunction('.hybridmixtures_show')">Research on hybrid mixtures</button>
+	<button class="button buttonprojectpartners" onclick="myFunction('.projectpartners_show')">Project Partners</button>	
+	<a href="aboutproject.html"><button class="button buttonaboutproject">About Project</button>	
+	<a href="Germany.html"><button class="button buttonnx">Germany</button></a>
+	
+	
+	<button class="button buttonaskedfacilities" onclick="myFunction('.askedfacilities_show')">Asked Facilities</button>
+	<button class="button buttonapprovedfacilities" onclick="myFunction('.approvedfacilities_show')">Approved Facilities</button>
+	<a href="sop.html"><button class="button buttonsop">SOP</button></a>
+	<a href="Europe.html"><button class="button buttonnx">Europe</button></a>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<object data="Resources/SOP.pdf" style="width:100%;height:80vw">
+  <a href="Resources/SOP.pdf">PDF laden</a>
+</object>
+</body>
+
+</html>
